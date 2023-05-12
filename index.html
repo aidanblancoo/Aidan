@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id ="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class ="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Coursework and Projects</a></li>
+                <li><a href="#profile">Profiles</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Undergraduate Student at Old Dominion</p>
+            <h1>Hi, I'm Aidan Blanco</h1>
+        </div>
+    </div>
+</div>
+<!----------about------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+                <img src="images/about.jpg">
+        </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>Hello! My name is Aidan Blanco, currently a junior at Old Dominion University. I am working towards a Computer Science degree. 
+                I was born and raised in Chesapeake, Virginia, not too far at all from ODU. My two favorite hobbies are playing video games and basketball. 
+                I work at the Student Success Center at ODU as an Administrative Assistant. I also am involved with student organizations 
+                such as the Esports Club, the Vietnamese, and Filipino Student Associations.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming Languages</span><br>Java, C++, HTML, CSS, Javascript</li>
+                        <li><span>Tools</span><br>Git, Linux, VSCode, Eclipse, Unity, VEXcode, AutoCAD, Revit</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Administrative Assistant</span><br>Student Success Center at Old Dominion University</li>
+                        <li><span>Intern</span><br>Mitre Corporation</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Old Dominion University</span><br>Bachelor of Science in Computer Science</li>
+                        <li><span>Relevant coursework</span><br>Object-Oriented Programming and Design, Computer Architecture, Programming for Unix</li>
+                        <li><span>Awards</span><br>4x recipient of Merit-Based Scholarship, 3x recipient of Dean’s List</li>
+                    </ul>
+                </div>
+          </div>  
+    </div>
+</div>
+<!----------projects------------------->
+<div id="project">
+    <div class="container">
+        <h1 class="sub-title">Coursework and Projects</h1>
+        <div class="project-list">
+            <div>
+                <h2>Tic Tac Toe</h2>
+                <p>Designed, developed, and deployed a fully functional Tic-Tac-Toe game using 
+                HTML, CSS, and JavaScript, demonstrating proficiency in front-end web development.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <h2>Meme Generator</h2>
+                <p>Collaborated in a team of 4 to develop a meme API generator using python and Linux Ubuntu 
+                    to design and implement features, debugging code, and creating the application.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <h2>ePortfolio</h2>
+                <p>Designed, developed, and published an ePortfolio website using WordPress for 
+                a course called "Cybersecurity and the Social Sciences" offered at ODU.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------Profiles------------------->
+<div id="profile">
+    <div class="container">
+        <h1 class="sub-title">Profiles</h1>
+        <div class="profile-list">
+            <div>
+                <h2>My LinkedIn</h2>
+                <a href="https://www.linkedin.com/in/aidanblanco/" target="_blank" rel="noopener noreferrer">Learn More</a>
+            </div>
+            <div>
+                <h2>My GitHub</h2>
+                <a href="https://github.com/aidanblancoo" target="_blank" rel="noopener noreferrer">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------Contact------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>aibigblue@gmail.com</p>
+            </div>
+            <div class="contact-right"></div>
+            <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+   var tablinks = document.getElementsByClassName("tab-links");
+   var tabcontents = document.getElementsByClassName("tab-contents");
+   
+   function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+   
+</script>
+</body>
+</html>
